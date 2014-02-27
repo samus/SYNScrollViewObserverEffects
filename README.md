@@ -7,6 +7,10 @@
 
 To run the example project; clone the repo, and run `pod install` from the Project directory first.
 
+![Alt text](/Readme_Images/parallaxdemo1.png "Scroll start")
+![Alt text](/Readme_Images/parallaxdemo2.png "Scrolling")
+
+Note: This library doesn't apply the blur shown in the screenshots but the example project shows how it can be done.
 ## Requirements
 
 ## Installation
