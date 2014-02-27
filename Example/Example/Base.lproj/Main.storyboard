@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="4514" systemVersion="13B3116" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="vXZ-lx-hvc">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3747"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="ufC-wZ-h7g">
+            <objects>
+                <viewController id="vXZ-lx-hvc" customClass="SYNViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Sfu-t9-LNG"/>
+                        <viewControllerLayoutGuide type="bottom" id="5rh-6m-5pk"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="A2O-3n-qaN" userLabel="Parallaxed">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="300"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="sample" translatesAutoresizingMaskIntoConstraints="NO" id="mlw-M8-DaS">
+                                        <rect key="frame" x="0.0" y="44" width="320" height="270"/>
+                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="320" id="CCo-6y-XYB"/>
+                                            <constraint firstAttribute="height" constant="270" id="mOh-CA-FlX"/>
+                                        </constraints>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="mlw-M8-DaS" secondAttribute="trailing" id="5ib-em-yEL"/>
+                                    <constraint firstItem="mlw-M8-DaS" firstAttribute="top" secondItem="A2O-3n-qaN" secondAttribute="top" constant="44" id="Lcn-Ea-Jor"/>
+                                    <constraint firstAttribute="height" constant="300" id="PY0-AI-nMh"/>
+                                    <constraint firstItem="mlw-M8-DaS" firstAttribute="leading" secondItem="A2O-3n-qaN" secondAttribute="leading" id="Rok-Uf-kc2"/>
+                                    <constraint firstAttribute="bottom" secondItem="mlw-M8-DaS" secondAttribute="bottom" id="tre-CL-NVy"/>
+                                </constraints>
+                            </scrollView>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BRB-I9-EWQ" userLabel="Observed">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BPT-1o-HVR" userLabel="Background">
+                                        <rect key="frame" x="0.0" y="273" width="320" height="642"/>
+                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                        <subviews>
+                                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="293" translatesAutoresizingMaskIntoConstraints="NO" id="OLx-AM-fgN">
+                                                <rect key="frame" x="14" y="0.0" width="293" height="629"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <string key="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi a semper est. Suspendisse imperdiet lectus ligula, at congue diam blandit sed. Suspendisse potenti. Phasellus pharetra mauris sit amet urna volutpat, nec sollicitudin lectus pulvinar. Vivamus et nunc felis. Quisque blandit, mi sed adipiscing feugiat, nisl nunc posuere est, a hendrerit nunc erat ut est. Aenean cursus odio in libero iaculis, id tincidunt enim luctus.
+
+Nunc nec risus vitae odio pretium blandit a non sapien. Donec vitae tellus elementum urna blandit feugiat. Cras adipiscing massa vitae porttitor porta. Morbi vestibulum eu justo at placerat. Vestibulum hendrerit, erat nec faucibus varius, lorem nulla auctor velit, id consequat ipsum est sed quam. Integer nulla sapien, tempor at tortor non, tristique ullamcorper tellus. Nulla pulvinar tortor risus, a vehicula enim tempus at. In non massa facilisis, laoreet augue a, elementum nibh. Pellentesque nibh justo, semper ut felis vitae, tempus interdum nulla. Aenean nec congue metus.</string>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstAttribute="bottom" secondItem="OLx-AM-fgN" secondAttribute="bottom" constant="13" id="GzU-Zb-gVR"/>
+                                            <constraint firstAttribute="trailing" secondItem="OLx-AM-fgN" secondAttribute="trailing" constant="13" id="eDR-p4-o6d"/>
+                                            <constraint firstItem="OLx-AM-fgN" firstAttribute="top" secondItem="BPT-1o-HVR" secondAttribute="top" id="rnK-ac-8tI"/>
+                                            <constraint firstItem="OLx-AM-fgN" firstAttribute="leading" secondItem="BPT-1o-HVR" secondAttribute="leading" constant="14" id="yKG-IE-1VC"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="BPT-1o-HVR" secondAttribute="trailing" id="0Ib-bh-2OP"/>
+                                    <constraint firstItem="BPT-1o-HVR" firstAttribute="top" secondItem="BRB-I9-EWQ" secondAttribute="top" constant="273" id="799-kC-OZg"/>
+                                    <constraint firstAttribute="bottom" secondItem="BPT-1o-HVR" secondAttribute="bottom" id="hmp-ru-Cgm"/>
+                                    <constraint firstItem="BPT-1o-HVR" firstAttribute="leading" secondItem="BRB-I9-EWQ" secondAttribute="leading" id="ufp-zu-Ad6"/>
+                                </constraints>
+                            </scrollView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xIW-zc-Gja" userLabel="Status bar underlay">
+                                <rect key="frame" x="0.0" y="-2" width="320" height="22"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.5" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="22" id="aWh-dQ-7u2"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Sfu-t9-LNG" firstAttribute="top" secondItem="A2O-3n-qaN" secondAttribute="bottom" constant="-280" id="2Cy-BB-94U"/>
+                            <constraint firstItem="A2O-3n-qaN" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="2qf-i5-aiJ"/>
+                            <constraint firstItem="BRB-I9-EWQ" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="6nh-gj-ZuW"/>
+                            <constraint firstItem="BRB-I9-EWQ" firstAttribute="top" secondItem="kh9-bI-dsS" secondAttribute="top" id="A5G-gR-keX"/>
+                            <constraint firstItem="xIW-zc-Gja" firstAttribute="top" secondItem="Sfu-t9-LNG" secondAttribute="bottom" constant="-22" id="Nol-Ec-ZAf"/>
+                            <constraint firstAttribute="trailing" secondItem="xIW-zc-Gja" secondAttribute="trailing" id="OZX-N7-uFk"/>
+                            <constraint firstAttribute="bottom" secondItem="BRB-I9-EWQ" secondAttribute="bottom" id="e4s-ju-w6q"/>
+                            <constraint firstItem="xIW-zc-Gja" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="f3l-1e-N98"/>
+                            <constraint firstAttribute="trailing" secondItem="BRB-I9-EWQ" secondAttribute="trailing" id="mLN-KG-VXx"/>
+                            <constraint firstAttribute="trailing" secondItem="A2O-3n-qaN" secondAttribute="trailing" id="tUq-Nd-CeN"/>
+                        </constraints>
+                    </view>
+                    <simulatedStatusBarMetrics key="simulatedStatusBarMetrics"/>
+                    <connections>
+                        <outlet property="observed" destination="BRB-I9-EWQ" id="2Pe-R0-uff"/>
+                        <outlet property="parallaxed" destination="A2O-3n-qaN" id="t5Z-GL-Iub"/>
+                        <outlet property="sampleImageView" destination="mlw-M8-DaS" id="M8C-ge-dkX"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="sample" width="320" height="270"/>
+    </resources>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination" type="retina4"/>
+    </simulatedMetricsContainer>
+</document>
