@@ -3,14 +3,24 @@
 [![Version](http://cocoapod-badges.herokuapp.com/v/SYNParallaxScrollObserver/badge.png)](http://cocoadocs.org/docsets/SYNParallaxScrollObserver)
 [![Platform](http://cocoapod-badges.herokuapp.com/p/SYNParallaxScrollObserver/badge.png)](http://cocoadocs.org/docsets/SYNParallaxScrollObserver)
 
-## Usage
-
-To run the example project; clone the repo, and run `pod install` from the Project directory first.
+SYNParallaxScrollObserver is a class that observes the content offset of one scrollview and applies a parallaxed version of the offset to another scrollview.
 
 ![Alt text](/Readme_Images/parallaxdemo1.png "Scroll start")
 ![Alt text](/Readme_Images/parallaxdemo2.png "Scrolling")
 
 Note: This library doesn't apply the blur shown in the screenshots but the example project shows how it can be done.
+
+## Usage
+
+To run the example project; clone the repo, and run `pod install` from the Project directory first.
+
+Using in a project can be done with the following code.
+
+``` objc
+    self.parallaxObserver = [[SYNParallaxScrollObserver alloc] initWithObservedScrollView:self.observed parallaxedScrollView:self.parallaxed];
+    [self.parallaxObserver startObserving];
+```
+
 ## Requirements
 
 ## Installation
