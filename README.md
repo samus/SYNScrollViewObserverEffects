@@ -17,8 +17,8 @@ To run the example project; clone the repo, and run `pod install` from the Proje
 Using in a project can be done with the following code.
 
 ``` objc
-    self.parallaxObserver = [[SYNParallaxScrollObserver alloc] initWithObservedScrollView:self.observed parallaxedScrollView:self.parallaxed];
-    [self.parallaxObserver startObserving];
+self.parallaxObserver = [[SYNParallaxScrollObserver alloc] initWithObservedScrollView:self.observed parallaxedScrollView:self.parallaxed];
+[self.parallaxObserver startObserving];
 ```
 
 ## Requirements
