@@ -57,4 +57,15 @@ static void * ContentOffsetContext = &ContentOffsetContext;
 - (void)observedContentOffsetChanged:(CGPoint) point
 {
 }
+
+
+- (CGFloat)offSetForObservationDirectionWithPoint:(CGPoint)point
+{
+    if (self.observeDirection == SYNScrollDirectionVertical){
+        return point.y;
+    }else {
+        return point.x;
+    }
+}
+
 @end

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="5051" systemVersion="13C64" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="vXZ-lx-hvc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="4514" systemVersion="13C64" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="vXZ-lx-hvc">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3747"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -16,7 +16,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="A2O-3n-qaN" userLabel="Parallaxed">
+                            <scrollView multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="A2O-3n-qaN" userLabel="Parallaxed">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="300"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <subviews>
@@ -31,10 +31,10 @@
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
-                                    <constraint firstAttribute="trailing" secondItem="mlw-M8-DaS" secondAttribute="trailing" id="5ib-em-yEL"/>
                                     <constraint firstItem="mlw-M8-DaS" firstAttribute="top" secondItem="A2O-3n-qaN" secondAttribute="top" constant="44" id="Lcn-Ea-Jor"/>
+                                    <constraint firstAttribute="trailing" secondItem="mlw-M8-DaS" secondAttribute="trailing" priority="990" id="NtM-hk-X84"/>
                                     <constraint firstAttribute="height" constant="300" id="PY0-AI-nMh"/>
-                                    <constraint firstItem="mlw-M8-DaS" firstAttribute="leading" secondItem="A2O-3n-qaN" secondAttribute="leading" id="Rok-Uf-kc2"/>
+                                    <constraint firstItem="mlw-M8-DaS" firstAttribute="leading" secondItem="A2O-3n-qaN" secondAttribute="leading" priority="990" id="gzb-mO-ztV"/>
                                     <constraint firstAttribute="bottom" secondItem="mlw-M8-DaS" secondAttribute="bottom" id="tre-CL-NVy"/>
                                 </constraints>
                             </scrollView>

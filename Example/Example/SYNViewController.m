@@ -10,6 +10,8 @@
 
 #import "SYNParallaxScrollObserver.h"
 #import "SYNBlurScrollObserver.h"
+#import "SYNOverScrollExpandObserver.h"
+#import "SYNOverScrollExpandObserver.h"
 
 @interface SYNViewController () <SYNParallaxScrollObserverDelegate>
 @property (strong, nonatomic) SYNParallaxScrollObserver *parallaxObserver;
@@ -21,6 +23,7 @@
 
 @property (strong, nonatomic) NSOperationQueue *renderQueue;
 @property(nonatomic, strong) id blurObserver;
+@property(nonatomic, strong) SYNOverScrollExpandObserver *overScrollExpandObserver;
 @end
 
 @implementation SYNViewController
@@ -36,6 +39,9 @@
 
     self.blurObserver = [[SYNBlurScrollObserver alloc] initWithObservedScrollView:self.observed blurredImageView:self.sampleImageView];
     [self.blurObserver startObserving];
+    
+    self.overScrollExpandObserver = [[SYNOverScrollExpandObserver alloc] initWithObservedScrollView:self.observed expandView:self.parallaxed];
+    [self.overScrollExpandObserver startObserving];
 }
 
 - (void) parallaxObserver:(SYNParallaxScrollObserver *)observer changedParallaxedOffset:(CGPoint)offset

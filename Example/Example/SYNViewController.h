@@ -8,6 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
+@class SYNOverScrollExpandObserver;
+
 @interface SYNViewController : UIViewController
 
 @end

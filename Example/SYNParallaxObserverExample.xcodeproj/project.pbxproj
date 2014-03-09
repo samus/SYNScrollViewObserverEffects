@@ -26,6 +26,7 @@
 		09F89FE818CA70E7009FC7C1 /* SYNBlurScrollObserver.m in Sources */ = {isa = PBXBuildFile; fileRef = 09F89FE718CA70E7009FC7C1 /* SYNBlurScrollObserver.m */; };
 		6824EB017A9B26008A31C4DE /* SYNScrollObserver.m in Sources */ = {isa = PBXBuildFile; fileRef = 6824E6662FEB730F4CDB1332 /* SYNScrollObserver.m */; };
 		6824ECDAE4231C133426CD6C /* SYNScrollObserver.m in Sources */ = {isa = PBXBuildFile; fileRef = 6824E6662FEB730F4CDB1332 /* SYNScrollObserver.m */; };
+		6824EEF2E871FAC7C5A37B19 /* SYNOverScrollExpandObserver.m in Sources */ = {isa = PBXBuildFile; fileRef = 6824E7E2A5D3593548E58F72 /* SYNOverScrollExpandObserver.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -64,6 +65,8 @@
 		09F89FE718CA70E7009FC7C1 /* SYNBlurScrollObserver.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SYNBlurScrollObserver.m; path = ../SYNParallaxObserver/SYNBlurScrollObserver.m; sourceTree = "<group>"; };
 		6824E6662FEB730F4CDB1332 /* SYNScrollObserver.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SYNScrollObserver.m; path = ../SYNParallaxObserver/SYNScrollObserver.m; sourceTree = "<group>"; };
 		6824E7259D794C91B5E26B73 /* SYNScrollObserver.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SYNScrollObserver.h; path = ../SYNParallaxObserver/SYNScrollObserver.h; sourceTree = "<group>"; };
+		6824E7E2A5D3593548E58F72 /* SYNOverScrollExpandObserver.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SYNOverScrollExpandObserver.m; sourceTree = "<group>"; };
+		6824EE027523020887301EF7 /* SYNOverScrollExpandObserver.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SYNOverScrollExpandObserver.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -173,6 +176,8 @@
 				09F89FE718CA70E7009FC7C1 /* SYNBlurScrollObserver.m */,
 				6824E6662FEB730F4CDB1332 /* SYNScrollObserver.m */,
 				6824E7259D794C91B5E26B73 /* SYNScrollObserver.h */,
+				6824E7E2A5D3593548E58F72 /* SYNOverScrollExpandObserver.m */,
+				6824EE027523020887301EF7 /* SYNOverScrollExpandObserver.h */,
 			);
 			name = SYNParallaxScrollObserver;
 			sourceTree = "<group>";
@@ -281,6 +286,7 @@
 				09C9638918BEAF9B0031448B /* SYNAppDelegate.m in Sources */,
 				09C9638F18BEAF9B0031448B /* SYNViewController.m in Sources */,
 				6824EB017A9B26008A31C4DE /* SYNScrollObserver.m in Sources */,
+				6824EEF2E871FAC7C5A37B19 /* SYNOverScrollExpandObserver.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
