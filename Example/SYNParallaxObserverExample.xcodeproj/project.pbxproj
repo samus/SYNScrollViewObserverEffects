@@ -23,7 +23,9 @@
 		09C963A418BEAF9B0031448B /* ExampleTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 09C963A318BEAF9B0031448B /* ExampleTests.m */; };
 		09C963B618BEE1160031448B /* SYNParallaxScrollObserver.m in Sources */ = {isa = PBXBuildFile; fileRef = 09C963B518BEE1160031448B /* SYNParallaxScrollObserver.m */; };
 		09C963B718BEE1160031448B /* SYNParallaxScrollObserver.m in Sources */ = {isa = PBXBuildFile; fileRef = 09C963B518BEE1160031448B /* SYNParallaxScrollObserver.m */; };
-		09C963BB18BEF5910031448B /* UIImage+ImageEffects.m in Sources */ = {isa = PBXBuildFile; fileRef = 09C963BA18BEF5910031448B /* UIImage+ImageEffects.m */; };
+		09F89FE818CA70E7009FC7C1 /* SYNBlurScrollObserver.m in Sources */ = {isa = PBXBuildFile; fileRef = 09F89FE718CA70E7009FC7C1 /* SYNBlurScrollObserver.m */; };
+		6824EB017A9B26008A31C4DE /* SYNScrollObserver.m in Sources */ = {isa = PBXBuildFile; fileRef = 6824E6662FEB730F4CDB1332 /* SYNScrollObserver.m */; };
+		6824ECDAE4231C133426CD6C /* SYNScrollObserver.m in Sources */ = {isa = PBXBuildFile; fileRef = 6824E6662FEB730F4CDB1332 /* SYNScrollObserver.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,8 +60,10 @@
 		09C963A318BEAF9B0031448B /* ExampleTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ExampleTests.m; sourceTree = "<group>"; };
 		09C963B418BEE1160031448B /* SYNParallaxScrollObserver.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SYNParallaxScrollObserver.h; path = ../SYNParallaxObserver/SYNParallaxScrollObserver.h; sourceTree = "<group>"; };
 		09C963B518BEE1160031448B /* SYNParallaxScrollObserver.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SYNParallaxScrollObserver.m; path = ../SYNParallaxObserver/SYNParallaxScrollObserver.m; sourceTree = "<group>"; };
-		09C963B918BEF5910031448B /* UIImage+ImageEffects.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+ImageEffects.h"; sourceTree = "<group>"; };
-		09C963BA18BEF5910031448B /* UIImage+ImageEffects.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+ImageEffects.m"; sourceTree = "<group>"; };
+		09F89FE618CA70E7009FC7C1 /* SYNBlurScrollObserver.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SYNBlurScrollObserver.h; path = ../SYNParallaxObserver/SYNBlurScrollObserver.h; sourceTree = "<group>"; };
+		09F89FE718CA70E7009FC7C1 /* SYNBlurScrollObserver.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SYNBlurScrollObserver.m; path = ../SYNParallaxObserver/SYNBlurScrollObserver.m; sourceTree = "<group>"; };
+		6824E6662FEB730F4CDB1332 /* SYNScrollObserver.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SYNScrollObserver.m; path = ../SYNParallaxObserver/SYNScrollObserver.m; sourceTree = "<group>"; };
+		6824E7259D794C91B5E26B73 /* SYNScrollObserver.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SYNScrollObserver.h; path = ../SYNParallaxObserver/SYNScrollObserver.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -127,8 +131,6 @@
 				09C9638E18BEAF9B0031448B /* SYNViewController.m */,
 				09C9639018BEAF9B0031448B /* Images.xcassets */,
 				09C9637F18BEAF9B0031448B /* Supporting Files */,
-				09C963B918BEF5910031448B /* UIImage+ImageEffects.h */,
-				09C963BA18BEF5910031448B /* UIImage+ImageEffects.m */,
 			);
 			path = Example;
 			sourceTree = "<group>";
@@ -167,6 +169,10 @@
 			children = (
 				09C963B418BEE1160031448B /* SYNParallaxScrollObserver.h */,
 				09C963B518BEE1160031448B /* SYNParallaxScrollObserver.m */,
+				09F89FE618CA70E7009FC7C1 /* SYNBlurScrollObserver.h */,
+				09F89FE718CA70E7009FC7C1 /* SYNBlurScrollObserver.m */,
+				6824E6662FEB730F4CDB1332 /* SYNScrollObserver.m */,
+				6824E7259D794C91B5E26B73 /* SYNScrollObserver.h */,
 			);
 			name = SYNParallaxScrollObserver;
 			sourceTree = "<group>";
@@ -269,11 +275,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				09F89FE818CA70E7009FC7C1 /* SYNBlurScrollObserver.m in Sources */,
 				09C963B618BEE1160031448B /* SYNParallaxScrollObserver.m in Sources */,
-				09C963BB18BEF5910031448B /* UIImage+ImageEffects.m in Sources */,
 				09C9638518BEAF9B0031448B /* main.m in Sources */,
 				09C9638918BEAF9B0031448B /* SYNAppDelegate.m in Sources */,
 				09C9638F18BEAF9B0031448B /* SYNViewController.m in Sources */,
+				6824EB017A9B26008A31C4DE /* SYNScrollObserver.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -283,6 +290,7 @@
 			files = (
 				09C963B718BEE1160031448B /* SYNParallaxScrollObserver.m in Sources */,
 				09C963A418BEAF9B0031448B /* ExampleTests.m in Sources */,
+				6824ECDAE4231C133426CD6C /* SYNScrollObserver.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -483,6 +491,7 @@
 				09C963A918BEAF9B0031448B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		09C963AA18BEAF9B0031448B /* Build configuration list for PBXNativeTarget "SYNParallaxObserverExampleTests" */ = {
 			isa = XCConfigurationList;
@@ -491,6 +500,7 @@
 				09C963AC18BEAF9B0031448B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

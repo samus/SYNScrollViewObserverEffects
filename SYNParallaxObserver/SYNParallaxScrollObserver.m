@@ -8,53 +8,26 @@
 
 #import "SYNParallaxScrollObserver.h"
 
-@interface SYNParallaxScrollObserver () {
-    BOOL _isObserving;
-}
-@property (weak, nonatomic) UIScrollView *observedScrollView;
+@interface SYNParallaxScrollObserver ()
+
 @property (weak, nonatomic) UIScrollView *parallaxedScrollView;
 
 @end
 
-static void * ContentOffsetContext = &ContentOffsetContext;
+
 
 @implementation SYNParallaxScrollObserver
 
 - (instancetype)initWithObservedScrollView:(UIScrollView *) observedScrollView parallaxedScrollView:(UIScrollView *) parallaxedScrollView
 {
-    self = [super init];
+    self = [super initWithObservedScrollView:observedScrollView];
     if (self) {
-        self.observedScrollView = observedScrollView;
         self.parallaxedScrollView = parallaxedScrollView;
         self.maxOffset = CGPointZero;
         self.minOffset = CGPointMake(0, -5);
         self.parallaxRatio = 5.0f;
     }
     return self;
-}
-
-- (void)startObserving
-{
-    [self.observedScrollView addObserver:self forKeyPath:NSStringFromSelector(@selector(contentOffset)) options:NSKeyValueObservingOptionNew context:ContentOffsetContext];
-    _isObserving = YES;
-}
-
-- (void)dealloc
-{
-    if (_isObserving) {
-        [self.observedScrollView removeObserver:self forKeyPath:NSStringFromSelector(@selector(contentOffset))];
-        _isObserving = NO;
-    }
-
-}
-
-- (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary *)change context:(void *)context
-{
-    NSString *contentOffset = NSStringFromSelector(@selector(contentOffset));
-    if (context == ContentOffsetContext && [keyPath isEqualToString:contentOffset]) {
-        CGPoint pt = [change[NSKeyValueChangeNewKey] CGPointValue];
-        [self observedContentOffsetChanged:pt];
-    }
 }
 
 - (void)observedContentOffsetChanged:(CGPoint) point

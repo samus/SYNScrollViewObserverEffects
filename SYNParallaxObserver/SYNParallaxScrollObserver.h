@@ -7,19 +7,16 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "SYNScrollObserver.h"
 
 @protocol SYNParallaxScrollObserverDelegate;
 
-@interface SYNParallaxScrollObserver : NSObject
+@interface SYNParallaxScrollObserver : SYNScrollObserver
 
-@property (nonatomic) CGPoint maxOffset;
-@property (nonatomic) CGPoint minOffset;
 @property (nonatomic) CGFloat parallaxRatio;
 @property (weak, nonatomic) NSObject<SYNParallaxScrollObserverDelegate> *delegate;
 
 -(instancetype)initWithObservedScrollView:(UIScrollView *) observedScrollView parallaxedScrollView:(UIScrollView *) parallaxedScrollView;
-
-- (void)startObserving;
 
 @end
 
