@@ -24,9 +24,12 @@
 		09C963B618BEE1160031448B /* SYNParallaxScrollObserver.m in Sources */ = {isa = PBXBuildFile; fileRef = 09C963B518BEE1160031448B /* SYNParallaxScrollObserver.m */; };
 		09C963B718BEE1160031448B /* SYNParallaxScrollObserver.m in Sources */ = {isa = PBXBuildFile; fileRef = 09C963B518BEE1160031448B /* SYNParallaxScrollObserver.m */; };
 		09F89FE818CA70E7009FC7C1 /* SYNBlurScrollObserver.m in Sources */ = {isa = PBXBuildFile; fileRef = 09F89FE718CA70E7009FC7C1 /* SYNBlurScrollObserver.m */; };
+		09F89FEB18D28AF6009FC7C1 /* SYNNavBarHideScrollObserver.m in Sources */ = {isa = PBXBuildFile; fileRef = 09F89FEA18D28AF6009FC7C1 /* SYNNavBarHideScrollObserver.m */; };
+		09F89FEE18D28B54009FC7C1 /* SYNOverScrollExpandObserver.m in Sources */ = {isa = PBXBuildFile; fileRef = 09F89FED18D28B54009FC7C1 /* SYNOverScrollExpandObserver.m */; };
+		09F89FF118D28CE3009FC7C1 /* SYNExampleTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 09F89FF018D28CE3009FC7C1 /* SYNExampleTableViewController.m */; };
+		09F89FF418D2908B009FC7C1 /* SYNRootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 09F89FF318D2908B009FC7C1 /* SYNRootViewController.m */; };
 		6824EB017A9B26008A31C4DE /* SYNScrollObserver.m in Sources */ = {isa = PBXBuildFile; fileRef = 6824E6662FEB730F4CDB1332 /* SYNScrollObserver.m */; };
 		6824ECDAE4231C133426CD6C /* SYNScrollObserver.m in Sources */ = {isa = PBXBuildFile; fileRef = 6824E6662FEB730F4CDB1332 /* SYNScrollObserver.m */; };
-		6824EEF2E871FAC7C5A37B19 /* SYNOverScrollExpandObserver.m in Sources */ = {isa = PBXBuildFile; fileRef = 6824E7E2A5D3593548E58F72 /* SYNOverScrollExpandObserver.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,10 +66,16 @@
 		09C963B518BEE1160031448B /* SYNParallaxScrollObserver.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SYNParallaxScrollObserver.m; path = ../SYNParallaxObserver/SYNParallaxScrollObserver.m; sourceTree = "<group>"; };
 		09F89FE618CA70E7009FC7C1 /* SYNBlurScrollObserver.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SYNBlurScrollObserver.h; path = ../SYNParallaxObserver/SYNBlurScrollObserver.h; sourceTree = "<group>"; };
 		09F89FE718CA70E7009FC7C1 /* SYNBlurScrollObserver.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SYNBlurScrollObserver.m; path = ../SYNParallaxObserver/SYNBlurScrollObserver.m; sourceTree = "<group>"; };
+		09F89FE918D28AF6009FC7C1 /* SYNNavBarHideScrollObserver.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SYNNavBarHideScrollObserver.h; path = ../SYNParallaxObserver/SYNNavBarHideScrollObserver.h; sourceTree = "<group>"; };
+		09F89FEA18D28AF6009FC7C1 /* SYNNavBarHideScrollObserver.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SYNNavBarHideScrollObserver.m; path = ../SYNParallaxObserver/SYNNavBarHideScrollObserver.m; sourceTree = "<group>"; };
+		09F89FEC18D28B54009FC7C1 /* SYNOverScrollExpandObserver.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SYNOverScrollExpandObserver.h; path = ../SYNParallaxObserver/SYNOverScrollExpandObserver.h; sourceTree = "<group>"; };
+		09F89FED18D28B54009FC7C1 /* SYNOverScrollExpandObserver.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SYNOverScrollExpandObserver.m; path = ../SYNParallaxObserver/SYNOverScrollExpandObserver.m; sourceTree = "<group>"; };
+		09F89FEF18D28CE3009FC7C1 /* SYNExampleTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SYNExampleTableViewController.h; sourceTree = "<group>"; };
+		09F89FF018D28CE3009FC7C1 /* SYNExampleTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SYNExampleTableViewController.m; sourceTree = "<group>"; };
+		09F89FF218D2908B009FC7C1 /* SYNRootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SYNRootViewController.h; sourceTree = "<group>"; };
+		09F89FF318D2908B009FC7C1 /* SYNRootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SYNRootViewController.m; sourceTree = "<group>"; };
 		6824E6662FEB730F4CDB1332 /* SYNScrollObserver.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SYNScrollObserver.m; path = ../SYNParallaxObserver/SYNScrollObserver.m; sourceTree = "<group>"; };
 		6824E7259D794C91B5E26B73 /* SYNScrollObserver.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SYNScrollObserver.h; path = ../SYNParallaxObserver/SYNScrollObserver.h; sourceTree = "<group>"; };
-		6824E7E2A5D3593548E58F72 /* SYNOverScrollExpandObserver.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SYNOverScrollExpandObserver.m; sourceTree = "<group>"; };
-		6824EE027523020887301EF7 /* SYNOverScrollExpandObserver.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SYNOverScrollExpandObserver.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -134,6 +143,10 @@
 				09C9638E18BEAF9B0031448B /* SYNViewController.m */,
 				09C9639018BEAF9B0031448B /* Images.xcassets */,
 				09C9637F18BEAF9B0031448B /* Supporting Files */,
+				09F89FEF18D28CE3009FC7C1 /* SYNExampleTableViewController.h */,
+				09F89FF018D28CE3009FC7C1 /* SYNExampleTableViewController.m */,
+				09F89FF218D2908B009FC7C1 /* SYNRootViewController.h */,
+				09F89FF318D2908B009FC7C1 /* SYNRootViewController.m */,
 			);
 			path = Example;
 			sourceTree = "<group>";
@@ -170,14 +183,16 @@
 		09C963B818BEE1300031448B /* SYNParallaxScrollObserver */ = {
 			isa = PBXGroup;
 			children = (
-				09C963B418BEE1160031448B /* SYNParallaxScrollObserver.h */,
-				09C963B518BEE1160031448B /* SYNParallaxScrollObserver.m */,
 				09F89FE618CA70E7009FC7C1 /* SYNBlurScrollObserver.h */,
 				09F89FE718CA70E7009FC7C1 /* SYNBlurScrollObserver.m */,
-				6824E6662FEB730F4CDB1332 /* SYNScrollObserver.m */,
+				09F89FE918D28AF6009FC7C1 /* SYNNavBarHideScrollObserver.h */,
+				09F89FEA18D28AF6009FC7C1 /* SYNNavBarHideScrollObserver.m */,
+				09F89FEC18D28B54009FC7C1 /* SYNOverScrollExpandObserver.h */,
+				09F89FED18D28B54009FC7C1 /* SYNOverScrollExpandObserver.m */,
+				09C963B418BEE1160031448B /* SYNParallaxScrollObserver.h */,
+				09C963B518BEE1160031448B /* SYNParallaxScrollObserver.m */,
 				6824E7259D794C91B5E26B73 /* SYNScrollObserver.h */,
-				6824E7E2A5D3593548E58F72 /* SYNOverScrollExpandObserver.m */,
-				6824EE027523020887301EF7 /* SYNOverScrollExpandObserver.h */,
+				6824E6662FEB730F4CDB1332 /* SYNScrollObserver.m */,
 			);
 			name = SYNParallaxScrollObserver;
 			sourceTree = "<group>";
@@ -281,12 +296,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				09F89FE818CA70E7009FC7C1 /* SYNBlurScrollObserver.m in Sources */,
+				09F89FF418D2908B009FC7C1 /* SYNRootViewController.m in Sources */,
 				09C963B618BEE1160031448B /* SYNParallaxScrollObserver.m in Sources */,
+				09F89FF118D28CE3009FC7C1 /* SYNExampleTableViewController.m in Sources */,
 				09C9638518BEAF9B0031448B /* main.m in Sources */,
 				09C9638918BEAF9B0031448B /* SYNAppDelegate.m in Sources */,
 				09C9638F18BEAF9B0031448B /* SYNViewController.m in Sources */,
+				09F89FEE18D28B54009FC7C1 /* SYNOverScrollExpandObserver.m in Sources */,
+				09F89FEB18D28AF6009FC7C1 /* SYNNavBarHideScrollObserver.m in Sources */,
 				6824EB017A9B26008A31C4DE /* SYNScrollObserver.m in Sources */,
-				6824EEF2E871FAC7C5A37B19 /* SYNOverScrollExpandObserver.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
