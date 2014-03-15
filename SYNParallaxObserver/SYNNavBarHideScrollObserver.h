@@ -11,5 +11,7 @@
 @interface SYNNavBarHideScrollObserver : SYNScrollObserver
 @property (nonatomic) float travelThreshold;
 
-- (instancetype)initWithObservedScrollView:(UIScrollView *)observedScrollView navigationController:(UINavigationController *)navigationController;
+- (instancetype)initWithObservedScrollView:(UIScrollView *)observedScrollView inViewController:(UIViewController *) viewController;
+
+- (void)        resetNavBar;
 @end

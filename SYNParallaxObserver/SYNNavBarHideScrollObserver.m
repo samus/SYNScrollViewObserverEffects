@@ -9,25 +9,30 @@
 #import "SYNNavBarHideScrollObserver.h"
 
 @interface SYNNavBarHideScrollObserver ()
-@property (weak, nonatomic) UIScrollView *observedScrollView;
-@property (strong, nonatomic) UINavigationController *navController;
+@property (nonatomic, weak) UIScrollView *observedScrollView;
+@property (nonatomic, weak) UIViewController *scrollViewController;
+@property (nonatomic, weak) UINavigationController *navController;
 @property (nonatomic) CGPoint navBarOrigin;
 @property (nonatomic) CGPoint lastOffsetPoint;
 @end
+
+static NSString *kNavShowViewControllerNotification = @"UINavigationControllerWillShowViewControllerNotification";
 
 @implementation SYNNavBarHideScrollObserver {
     float minY;
     float maxY;
     float travelAmount;
+    BOOL _isObserving;
 }
 
-- (instancetype)initWithObservedScrollView:(UIScrollView *)observedScrollView navigationController:(UINavigationController *)navigationController
+- (instancetype)initWithObservedScrollView:(UIScrollView *)observedScrollView inViewController:(UIViewController *)viewController
 {
     self = [super initWithObservedScrollView:observedScrollView];
 
     if (self) {
-        self.navController = navigationController;
-        self.navBarOrigin = navigationController.navigationBar.frame.origin;
+        self.scrollViewController = viewController;
+        self.navController = viewController.navigationController;
+        self.navBarOrigin = self.navController.navigationBar.frame.origin;
         self.lastOffsetPoint = CGPointZero;
         self.travelThreshold = 40.0f;
         minY = -24;
@@ -37,9 +42,39 @@
     return self;
 }
 
+- (void)startObserving
+{
+    [super startObserving];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(viewControllerChange:) name:kNavShowViewControllerNotification object:self.navController];
+
+    _isObserving = YES;
+}
+
+- (void)dealloc
+{
+    if (_isObserving) {
+        [[NSNotificationCenter defaultCenter] removeObserver:self name:kNavShowViewControllerNotification object:self.navController];
+        _isObserving = NO;
+    }
+}
+
+- (void)viewControllerChange:(NSNotification *)notification
+{
+    [self resetNavBar];
+}
+
+- (void)resetNavBar
+{
+    CGRect barRect = self.navController.navigationBar.frame;
+
+    barRect.origin = self.navBarOrigin;
+    self.navController.navigationBar.frame = barRect;
+    [self setNavBarSubViewsAlpha:1.0];
+}
+
 - (void)observedContentOffsetChanged:(CGPoint)point
 {
-    if ([self isBouncingAtPoint:point]) {
+    if ([self isVisible] == NO || [self isBouncingAtPoint:point]) {
         return;
     }
 
@@ -60,6 +95,11 @@
 - (float)distanceScrolled:(CGPoint)point
 {
     return self.lastOffsetPoint.y - point.y;
+}
+
+- (BOOL)isVisible
+{
+    return self.navController.visibleViewController == self.scrollViewController;
 }
 
 - (BOOL)isBouncingAtPoint:(CGPoint)point
