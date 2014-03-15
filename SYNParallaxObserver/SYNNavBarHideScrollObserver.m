@@ -18,6 +18,7 @@
 @implementation SYNNavBarHideScrollObserver {
     float minY;
     float maxY;
+    float travelAmount;
 }
 
 - (instancetype)initWithObservedScrollView:(UIScrollView *)observedScrollView navigationController:(UINavigationController *)navigationController
@@ -28,7 +29,7 @@
         self.navController = navigationController;
         self.navBarOrigin = navigationController.navigationBar.frame.origin;
         self.lastOffsetPoint = CGPointZero;
-
+        self.travelThreshold = 40.0f;
         minY = -24;
         maxY = self.navBarOrigin.y;
     }
@@ -43,8 +44,15 @@
     }
 
     float distance = [self distanceScrolled:point];
-    float alpha = [self shiftNavBar:self.navController.navigationBar verticalPoints:distance];
-    [self setNavBarSubViewsAlpha:alpha];
+    travelAmount += distance;
+    float threshold = self.travelThreshold * -1;
+    travelAmount = travelAmount < threshold ? threshold : travelAmount;
+    travelAmount = travelAmount > 0 ? 0 : travelAmount;
+
+    if (travelAmount <= threshold || distance > 0.0) {
+        float alpha = [self shiftNavBar:self.navController.navigationBar verticalPoints:distance];
+        [self setNavBarSubViewsAlpha:alpha];
+    }
 
     self.lastOffsetPoint = point;
 }

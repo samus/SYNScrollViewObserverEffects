@@ -9,5 +9,7 @@
 #import "SYNScrollObserver.h"
 
 @interface SYNNavBarHideScrollObserver : SYNScrollObserver
+@property (nonatomic) float travelThreshold;
+
 - (instancetype)initWithObservedScrollView:(UIScrollView *)observedScrollView navigationController:(UINavigationController *)navigationController;
 @end
