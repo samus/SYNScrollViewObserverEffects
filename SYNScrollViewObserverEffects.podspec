@@ -1,12 +1,6 @@
-#
-# Be sure to run `pod spec lint NAME.podspec' to ensure this is a
-# valid spec and remove all comments before submitting the spec.
-#
-# To learn more about the attributes see http://guides.cocoapods.org/syntax/podspec.html
-#
 Pod::Spec.new do |s|
   s.name             = "SYNScrollViewObserverEffects"
-  s.version          = "0.1.0"
+  s.version          = "0.1.1"
   s.summary          = "A number of view effects based on observing the content offset of a scrollview.."
   s.description      = <<-DESC
                        SYNScrollViewObserverEffects is a collection of effects that can be easily added to view controllers containging
@@ -14,7 +8,7 @@ Pod::Spec.new do |s|
 
                        Note: Most of the effects are compatible with iOS 6.0 but not all.  The blur effect in particular requires 7.0.
                        DESC
-  #s.homepage         = "http://EXAMPLE/NAME"
+  s.homepage         = "http://github.com/samus/SYNScrollViewObserverEffects"
   s.screenshots      = "github.com/samus/SYNScrollViewObserverEffects/blob/develop/Readme_Images/parallaxdemo1.png", "github.com/samus/SYNScrollViewObserverEffects/blob/develop/Readme_Images/parallaxdemo2.png"
   s.license          = 'MIT'
   s.author           = { "Sam Corder" => "sam.corder@gmail.com" }
@@ -27,5 +21,4 @@ Pod::Spec.new do |s|
   s.requires_arc = true
 
   s.source_files = 'SYNScrollViewObserverEffects'
-  s.resources = 'Assets'
 end
