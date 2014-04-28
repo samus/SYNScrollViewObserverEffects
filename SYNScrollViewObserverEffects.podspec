@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name             = "SYNScrollViewObserverEffects"
-  s.version          = "0.1.1"
+  s.version          = "0.1.2"
   s.summary          = "A number of view effects based on observing the content offset of a scrollview.."
   s.description      = <<-DESC
                        SYNScrollViewObserverEffects is a collection of effects that can be easily added to view controllers containing

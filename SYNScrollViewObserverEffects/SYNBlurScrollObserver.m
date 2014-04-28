@@ -32,6 +32,7 @@ const int kMinBlur = 0;
         self.damper = 10.0;
         self.renderQueue = [[NSOperationQueue alloc] init];
         self.renderQueue.name = @"Blur Queue";
+        [self observedContentOffsetChanged:observedScrollView.contentOffset];
     }
     return self;
 }
