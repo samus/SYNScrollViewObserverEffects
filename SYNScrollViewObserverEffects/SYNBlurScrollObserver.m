@@ -20,6 +20,7 @@ const int kMinBlur = 0;
 @property(nonatomic, strong) UIImage *originalImage;
 @property(nonatomic, strong) UIImageView *blurredImageView;
 @property(nonatomic, strong) NSOperationQueue *renderQueue;
+@property(nonatomic) NSInteger lastRadius;
 @end
 
 @implementation SYNBlurScrollObserver
@@ -32,6 +33,7 @@ const int kMinBlur = 0;
         self.damper = 10.0;
         self.renderQueue = [[NSOperationQueue alloc] init];
         self.renderQueue.name = @"Blur Queue";
+        self.lastRadius = 0;
         [self observedContentOffsetChanged:observedScrollView.contentOffset];
     }
     return self;
@@ -39,29 +41,41 @@ const int kMinBlur = 0;
 
 - (void)observedContentOffsetChanged:(CGPoint)point {
     if (CGPointEqualToPoint(CGPointZero, point) || point.x < self.minOffset.x || point.y < self.minOffset.y) {
-        self.blurredImageView.image = self.originalImage;
         [self.renderQueue cancelAllOperations];
+        if (self.blurredImageView.image != self.originalImage) {
+            self.blurredImageView.image = self.originalImage;
+        }
         return;
     }
 
     float radius = floorf(point.y / self.damper);
 
-    if ([self shouldBlurAtPoint:point withRadius:radius]) {
-        [self.renderQueue addOperationWithBlock:^{
-            UIImage *blurredImage = [self applyBlurToImage:self.originalImage withRadius:radius tintColor:nil saturationDeltaFactor:1.0 maskImage:nil];
-            [[NSOperationQueue mainQueue] addOperationWithBlock:^{
-                self.blurredImageView.image = blurredImage;
-            }];
-        }];
+    if ([self shouldBlurAtPoint:point withRadius:radius] == NO) {
+        return;
     }
+    
+    NSBlockOperation *renderOp = [[NSBlockOperation alloc]init];
+    __weak __typeof__(renderOp) weakOp = renderOp;
+    __weak __typeof__(self) weakSelf = self;
+    [renderOp addExecutionBlock:^{
+        __typeof__(weakSelf) strongSelf = weakSelf;
+        UIImage *blurredImage = [strongSelf applyBlurToImage:strongSelf.originalImage withRadius:radius tintColor:nil saturationDeltaFactor:1.0 maskImage:nil];
+        
+        if (weakOp.isCancelled == NO) {
+            [[NSOperationQueue mainQueue] addOperationWithBlock:^{
+                strongSelf.blurredImageView.image = blurredImage;
+            }];
+        }
+    }];
+    [self.renderQueue addOperation:renderOp];
 
 }
 
 - (BOOL)shouldBlurAtPoint:(CGPoint)point withRadius:(CGFloat)radius {
-    static long lastRadius = 0;
-    long r = (long) floor(radius);
-
-    return r != lastRadius && r < kMaxBlur && r > kMinBlur;
+    long r = (NSInteger) floor(radius);
+    BOOL blur = r != _lastRadius && r < kMaxBlur && r > kMinBlur;
+    _lastRadius = r;
+    return blur;
 }
 
 //This blur is taken from Apple's UIImage+ImageEffects category as shown in WWDC 2013
