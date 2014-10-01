@@ -16,31 +16,14 @@
 		09C9638C18BEAF9B0031448B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 09C9638A18BEAF9B0031448B /* Main.storyboard */; };
 		09C9638F18BEAF9B0031448B /* SYNViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 09C9638E18BEAF9B0031448B /* SYNViewController.m */; };
 		09C9639118BEAF9B0031448B /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 09C9639018BEAF9B0031448B /* Images.xcassets */; };
-		09C9639818BEAF9B0031448B /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 09C9639718BEAF9B0031448B /* XCTest.framework */; };
-		09C9639918BEAF9B0031448B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 09C9637818BEAF9B0031448B /* Foundation.framework */; };
-		09C9639A18BEAF9B0031448B /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 09C9637C18BEAF9B0031448B /* UIKit.framework */; };
-		09C963A218BEAF9B0031448B /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 09C963A018BEAF9B0031448B /* InfoPlist.strings */; };
-		09C963A418BEAF9B0031448B /* ExampleTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 09C963A318BEAF9B0031448B /* ExampleTests.m */; };
 		09C963B618BEE1160031448B /* SYNParallaxScrollObserver.m in Sources */ = {isa = PBXBuildFile; fileRef = 09C963B518BEE1160031448B /* SYNParallaxScrollObserver.m */; };
-		09C963B718BEE1160031448B /* SYNParallaxScrollObserver.m in Sources */ = {isa = PBXBuildFile; fileRef = 09C963B518BEE1160031448B /* SYNParallaxScrollObserver.m */; };
 		09F89FE818CA70E7009FC7C1 /* SYNBlurScrollObserver.m in Sources */ = {isa = PBXBuildFile; fileRef = 09F89FE718CA70E7009FC7C1 /* SYNBlurScrollObserver.m */; };
 		09F89FEB18D28AF6009FC7C1 /* SYNNavBarHideScrollObserver.m in Sources */ = {isa = PBXBuildFile; fileRef = 09F89FEA18D28AF6009FC7C1 /* SYNNavBarHideScrollObserver.m */; };
 		09F89FEE18D28B54009FC7C1 /* SYNOverScrollExpandObserver.m in Sources */ = {isa = PBXBuildFile; fileRef = 09F89FED18D28B54009FC7C1 /* SYNOverScrollExpandObserver.m */; };
 		09F89FF118D28CE3009FC7C1 /* SYNExampleTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 09F89FF018D28CE3009FC7C1 /* SYNExampleTableViewController.m */; };
 		09F89FF418D2908B009FC7C1 /* SYNRootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 09F89FF318D2908B009FC7C1 /* SYNRootViewController.m */; };
 		6824EB017A9B26008A31C4DE /* SYNScrollObserver.m in Sources */ = {isa = PBXBuildFile; fileRef = 6824E6662FEB730F4CDB1332 /* SYNScrollObserver.m */; };
-		6824ECDAE4231C133426CD6C /* SYNScrollObserver.m in Sources */ = {isa = PBXBuildFile; fileRef = 6824E6662FEB730F4CDB1332 /* SYNScrollObserver.m */; };
 /* End PBXBuildFile section */
-
-/* Begin PBXContainerItemProxy section */
-		09C9639B18BEAF9B0031448B /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 09C9636D18BEAF9B0031448B /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 09C9637418BEAF9B0031448B;
-			remoteInfo = Example;
-		};
-/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		09C9637518BEAF9B0031448B /* SYNScrollViewObserverEffectsExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SYNScrollViewObserverEffectsExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -57,7 +40,6 @@
 		09C9638D18BEAF9B0031448B /* SYNViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SYNViewController.h; sourceTree = "<group>"; };
 		09C9638E18BEAF9B0031448B /* SYNViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SYNViewController.m; sourceTree = "<group>"; };
 		09C9639018BEAF9B0031448B /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		09C9639618BEAF9B0031448B /* SYNScrollViewObserverEffectsExampleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SYNScrollViewObserverEffectsExampleTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		09C9639718BEAF9B0031448B /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		09C9639F18BEAF9B0031448B /* SYNScrollViewObserverEffectsExampleTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "SYNScrollViewObserverEffectsExampleTests-Info.plist"; sourceTree = "<group>"; };
 		09C963A118BEAF9B0031448B /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
@@ -89,16 +71,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		09C9639318BEAF9B0031448B /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				09C9639818BEAF9B0031448B /* XCTest.framework in Frameworks */,
-				09C9639A18BEAF9B0031448B /* UIKit.framework in Frameworks */,
-				09C9639918BEAF9B0031448B /* Foundation.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -117,7 +89,6 @@
 			isa = PBXGroup;
 			children = (
 				09C9637518BEAF9B0031448B /* SYNScrollViewObserverEffectsExample.app */,
-				09C9639618BEAF9B0031448B /* SYNScrollViewObserverEffectsExampleTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -217,24 +188,6 @@
 			productReference = 09C9637518BEAF9B0031448B /* SYNScrollViewObserverEffectsExample.app */;
 			productType = "com.apple.product-type.application";
 		};
-		09C9639518BEAF9B0031448B /* SYNScrollViewObserverEffectsExampleTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 09C963AA18BEAF9B0031448B /* Build configuration list for PBXNativeTarget "SYNScrollViewObserverEffectsExampleTests" */;
-			buildPhases = (
-				09C9639218BEAF9B0031448B /* Sources */,
-				09C9639318BEAF9B0031448B /* Frameworks */,
-				09C9639418BEAF9B0031448B /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				09C9639C18BEAF9B0031448B /* PBXTargetDependency */,
-			);
-			name = SYNScrollViewObserverEffectsExampleTests;
-			productName = ExampleTests;
-			productReference = 09C9639618BEAF9B0031448B /* SYNScrollViewObserverEffectsExampleTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -244,11 +197,6 @@
 				CLASSPREFIX = SYN;
 				LastUpgradeCheck = 0500;
 				ORGANIZATIONNAME = "Synapptic Labs";
-				TargetAttributes = {
-					09C9639518BEAF9B0031448B = {
-						TestTargetID = 09C9637418BEAF9B0031448B;
-					};
-				};
 			};
 			buildConfigurationList = 09C9637018BEAF9B0031448B /* Build configuration list for PBXProject "SYNScrollViewObserverEffectsExample" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -264,7 +212,6 @@
 			projectRoot = "";
 			targets = (
 				09C9637418BEAF9B0031448B /* SYNScrollViewObserverEffectsExample */,
-				09C9639518BEAF9B0031448B /* SYNScrollViewObserverEffectsExampleTests */,
 			);
 		};
 /* End PBXProject section */
@@ -277,14 +224,6 @@
 				09C9639118BEAF9B0031448B /* Images.xcassets in Resources */,
 				09C9638318BEAF9B0031448B /* InfoPlist.strings in Resources */,
 				09C9638C18BEAF9B0031448B /* Main.storyboard in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		09C9639418BEAF9B0031448B /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				09C963A218BEAF9B0031448B /* InfoPlist.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -308,25 +247,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		09C9639218BEAF9B0031448B /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				09C963B718BEE1160031448B /* SYNParallaxScrollObserver.m in Sources */,
-				09C963A418BEAF9B0031448B /* ExampleTests.m in Sources */,
-				6824ECDAE4231C133426CD6C /* SYNScrollObserver.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		09C9639C18BEAF9B0031448B /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 09C9637418BEAF9B0031448B /* SYNScrollViewObserverEffectsExample */;
-			targetProxy = 09C9639B18BEAF9B0031448B /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		09C9638118BEAF9B0031448B /* InfoPlist.strings */ = {
@@ -433,7 +354,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = NO;
 				GCC_PREFIX_HEADER = "Example/SYNScrollViewObserverEffectsExample-Prefix.pch";
 				INFOPLIST_FILE = "Example/SYNScrollViewObserverEffectsExample-Info.plist";
 				PRODUCT_NAME = SYNScrollViewObserverEffectsExample;
@@ -446,53 +367,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = NO;
 				GCC_PREFIX_HEADER = "Example/SYNScrollViewObserverEffectsExample-Prefix.pch";
 				INFOPLIST_FILE = "Example/SYNScrollViewObserverEffectsExample-Info.plist";
 				PRODUCT_NAME = SYNScrollViewObserverEffectsExample;
 				WRAPPER_EXTENSION = app;
-			};
-			name = Release;
-		};
-		09C963AB18BEAF9B0031448B /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
-				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Example.app/Example";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-					"$(DEVELOPER_FRAMEWORKS_DIR)",
-				);
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "Example/Example-Prefix.pch";
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = "ExampleTests/SYNScrollViewObserverEffectsExampleTests-Info.plist";
-				PRODUCT_NAME = SYNScrollViewObserverEffectsExampleTests;
-				TEST_HOST = "$(BUNDLE_LOADER)";
-				WRAPPER_EXTENSION = xctest;
-			};
-			name = Debug;
-		};
-		09C963AC18BEAF9B0031448B /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
-				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Example.app/Example";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-					"$(DEVELOPER_FRAMEWORKS_DIR)",
-				);
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "Example/Example-Prefix.pch";
-				INFOPLIST_FILE = "ExampleTests/SYNScrollViewObserverEffectsExampleTests-Info.plist";
-				PRODUCT_NAME = SYNScrollViewObserverEffectsExampleTests;
-				TEST_HOST = "$(BUNDLE_LOADER)";
-				WRAPPER_EXTENSION = xctest;
 			};
 			name = Release;
 		};
@@ -513,15 +392,6 @@
 			buildConfigurations = (
 				09C963A818BEAF9B0031448B /* Debug */,
 				09C963A918BEAF9B0031448B /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		09C963AA18BEAF9B0031448B /* Build configuration list for PBXNativeTarget "SYNScrollViewObserverEffectsExampleTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				09C963AB18BEAF9B0031448B /* Debug */,
-				09C963AC18BEAF9B0031448B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

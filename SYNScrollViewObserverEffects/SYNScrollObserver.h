@@ -22,5 +22,6 @@ typedef NS_ENUM(NSInteger, SYNScrollObservationDirection) {
 - (CGFloat)offSetForObservationDirectionWithPoint:(CGPoint)point;
 
 - (void)startObserving;
+- (void)stopObserving;
 
 @end

@@ -38,12 +38,17 @@ static void *ContentOffsetContext = &ContentOffsetContext;
     _isObserving = YES;
 }
 
-- (void)dealloc
+- (void)stopObserving
 {
     if (_isObserving) {
         [self.observedScrollView removeObserver:self forKeyPath:NSStringFromSelector(@selector(contentOffset))];
         _isObserving = NO;
     }
+}
+
+- (void)dealloc
+{
+    [self stopObserving];
 }
 
 - (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary *)change context:(void *)context
