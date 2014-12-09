@@ -14,4 +14,6 @@
 @property (nonatomic) float damper;
 
 - (instancetype)initWithObservedScrollView:(UIScrollView *) observedScrollView blurredImageView:(UIImageView *)blurredImageView;
+- (instancetype)initWithObservedScrollView:(UIScrollView *)observedScrollView blurredImageView:(UIImageView *)blurredImageView damper:(float)damper;
+
 @end

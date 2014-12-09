@@ -26,11 +26,15 @@ const int kMinBlur = 0;
 @implementation SYNBlurScrollObserver
 
 - (instancetype)initWithObservedScrollView:(UIScrollView *)observedScrollView blurredImageView:(UIImageView *)blurredImageView {
+    return [self initWithObservedScrollView:observedScrollView blurredImageView:blurredImageView damper:10.0f];
+}
+
+- (instancetype)initWithObservedScrollView:(UIScrollView *)observedScrollView blurredImageView:(UIImageView *)blurredImageView damper:(float)damper {
     self = [super initWithObservedScrollView:observedScrollView];
     if (self) {
         self.blurredImageView = blurredImageView;
         self.originalImage = blurredImageView.image;
-        self.damper = 10.0;
+        self.damper = damper;
         self.renderQueue = [[NSOperationQueue alloc] init];
         self.renderQueue.name = @"Blur Queue";
         self.lastRadius = 0;
