@@ -11,9 +11,9 @@
 
 @interface SYNBlurScrollObserver : SYNScrollObserver
 
-@property (nonatomic) float damper;
+@property (nonatomic) CGFloat damper;
 
 - (instancetype)initWithObservedScrollView:(UIScrollView *) observedScrollView blurredImageView:(UIImageView *)blurredImageView;
-- (instancetype)initWithObservedScrollView:(UIScrollView *)observedScrollView blurredImageView:(UIImageView *)blurredImageView damper:(float)damper;
-
+- (instancetype)initWithObservedScrollView:(UIScrollView *) observedScrollView blurredImageView:(UIImageView *)blurredImageView damper:(CGFloat)damper;
+- (instancetype)initWithObservedScrollView:(UIScrollView *) observedScrollView blurredImageView:(UIImageView *)blurredImageView damper:(CGFloat)damper minOffset:(CGPoint)minOffset;
 @end

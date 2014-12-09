@@ -29,7 +29,13 @@ const int kMinBlur = 0;
     return [self initWithObservedScrollView:observedScrollView blurredImageView:blurredImageView damper:10.0f];
 }
 
-- (instancetype)initWithObservedScrollView:(UIScrollView *)observedScrollView blurredImageView:(UIImageView *)blurredImageView damper:(float)damper {
+- (instancetype)initWithObservedScrollView:(UIScrollView *)observedScrollView blurredImageView:(UIImageView *)blurredImageView damper:(CGFloat)damper
+{
+    return [self initWithObservedScrollView:observedScrollView blurredImageView:blurredImageView damper:damper minOffset:CGPointZero];
+}
+
+- (instancetype)initWithObservedScrollView:(UIScrollView *) observedScrollView blurredImageView:(UIImageView *)blurredImageView damper:(CGFloat)damper minOffset:(CGPoint)minOffset
+{
     self = [super initWithObservedScrollView:observedScrollView];
     if (self) {
         self.blurredImageView = blurredImageView;
@@ -38,6 +44,7 @@ const int kMinBlur = 0;
         self.renderQueue = [[NSOperationQueue alloc] init];
         self.renderQueue.name = @"Blur Queue";
         self.lastRadius = 0;
+        self.minOffset = minOffset;
         [self observedContentOffsetChanged:observedScrollView.contentOffset];
     }
     return self;
