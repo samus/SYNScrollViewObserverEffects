@@ -59,7 +59,7 @@ const int kMinBlur = 0;
         return;
     }
 
-    float radius = floorf(point.y / self.damper);
+    float radius = floorf((point.y - self.minOffset.y) / self.damper);
 
     if ([self shouldBlurAtPoint:point withRadius:radius] == NO) {
         return;
