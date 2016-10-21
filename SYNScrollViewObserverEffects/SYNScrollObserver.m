@@ -34,8 +34,10 @@ static void *ContentOffsetContext = &ContentOffsetContext;
 
 - (void)startObserving
 {
-    [self.observedScrollView addObserver:self forKeyPath:NSStringFromSelector(@selector(contentOffset)) options:NSKeyValueObservingOptionNew context:ContentOffsetContext];
-    _isObserving = YES;
+    if(!_isObserving){
+      [self.observedScrollView addObserver:self forKeyPath:NSStringFromSelector(@selector(contentOffset)) options:NSKeyValueObservingOptionNew context:ContentOffsetContext];
+      _isObserving = YES;
+    }
 }
 
 - (void)stopObserving
